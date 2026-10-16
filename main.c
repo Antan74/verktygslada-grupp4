@@ -22,6 +22,8 @@ static void skriv_meny(void) {
 
 int main(void) {
     int val;
+    double *matlogg = NULL;
+    int matlogg_antal = 0;
 
     do {
         skriv_meny();
@@ -170,10 +172,16 @@ int main(void) {
             }
 
             case 0:
+                if (matlogg != NULL) {
+                    frigor_matlogg(matlogg);
+                    matlogg = NULL;
+                    matlogg_antal = 0;
+                }
                 printf("Avslutar.\n");
                 break;
-            default:
-                printf("Ogiltigt val, forsok igen.\n");
+                default:
+                    printf("Ogiltigt val, forsok igen.\n");
+                    break;
         }
     } while (val != 0);
 
