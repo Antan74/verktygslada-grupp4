@@ -14,5 +14,7 @@ void skriv_flera_tabeller(int tal[], int antal);
 int raknar_primtal_i_array(int tal[], int antal);
 void fizzbuzz_sammanfattning(int fran, int till, char *sammanfattning);
 void byt_plats(double *a, double *b);
+double *lagg_till_matning(double *logg, int *antal , double varde);
+void skriv_matlogg(double *logg, int antal);
 
 #endif
